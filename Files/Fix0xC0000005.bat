@@ -1,0 +1,13 @@
+@echo off
+set PATH=%SYSTEMROOT%\SYSTEM32;%SYSTEMROOT%;%SYSTEMROOT%\SYSTEM32\WBEM;
+
+set  HELP=0xC0000005 Error Fix
+set USAGE=
+
+call EchoTitl 0xC0000005 Error Fix
+wusa.exe /QUIET /NORESTART /UNINSTALL /KB:2859537
+wusa.exe /QUIET /NORESTART /UNINSTALL /KB:2872339
+wusa.exe /QUIET /NORESTART /UNINSTALL /KB:2882822
+wusa.exe /QUIET /NORESTART /UNINSTALL /KB:971033
+
+:: http://it-like.ru/oshibka-pri-zapuske-prilozheniya-0xc0000005/

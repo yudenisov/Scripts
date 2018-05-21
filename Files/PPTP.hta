@@ -1,0 +1,225 @@
+<HTML>
+<HEAD>
+  <HTA:APPLICATION
+    id              = "HTApp"
+    border          = "thin"
+    borderstyle     = "static"
+    caption         = "yes"
+    contextmenu     = "no"
+    icon            = ""
+    innerborder     = "yes"
+    maximizebutton  = "no"
+    minimizebutton  = "yes"
+    navigable       = "yes"
+    scroll          = "no"
+    scrollflat      = "yes"
+    showintaskbar   = "yes"
+    singleinstance  = "no"
+    sysmenu         = "yes"
+    version         = "1.0"
+    windowstate     = "normal">
+
+  <META http-equiv="Content-Type" content="text/html; charset=cp1251">
+
+  <TITLE>Manage PPTP-connections</TITLE>
+
+  <STYLE type="text/css">
+    body      {font-weight: normal; font-size: 12pt; font-family: system; background: #201020; color: white;}
+    td        {font-weight: normal; font-size: 12pt; font-family: serif  ;}
+    input     {font-weight: normal; font-size: 10pt; font-family: verdana;}
+    textarea  {                     font-size:  8pt; width: 100%; height: 20;}
+    a:link    {font-weight: bold  ; color: #335577}
+    a:visited {font-weight: bold  ; color: #335577}
+    a:active  {font-weight: bold  ; color: #335577}
+    a:hover   {font-weight: bold  ; color: #0000FF}
+    table     {border-width: 2px}
+  </STYLE>
+</HEAD>
+
+<BODY leftmargin   = 5
+      rightmargin  = 5
+      topmargin    = 5
+      bottommargin = 5>
+
+  <FORM name=VPN>
+    <TABLE border=0 align=center>
+      <TBODY align=right>
+        <TR><TH><FONT color=#555555>(C) SMKSoft, 2011</FONT>
+        <TR><TH> VPN Server <INPUT type=text     size=50 name="Host"     onDblClick=Host_Switch()  onKeyUp=Host_Handler()    >
+        <TR><TH>  User name <INPUT type=text     size=50 name="Login"    onDblClick=Login_Switch() onKeyUp=Login_Handler()   >
+        <TR><TH>   Password <INPUT type=password size=50 name="Password" onDblClick=this.value=""  onKeyUp=Password_Handler()>
+        <TR><TH> DNS-Suffix <INPUT type=text     size=50 name="Suffix"   onDblClick=this.value=""  onKeyUp=Suffix_Handler()  >
+        <TR><TH>   VPN Name <INPUT type=text     size=50 name="Name"     onDblClick=this.value=""  onKeyUp=Name_Handler()    >
+        <TR><TH>            <INPUT type=button           name="Delete"   onClick=VPN_Delete()      value="Delete"            >
+                            <INPUT type=button           name="Add"      onClick=VPN_Add()         value="Add"               >
+    </TABLE>
+  </FORM>
+
+  <SCRIPT Language=VBScript>
+    Option Explicit
+
+    Class CliWrapper
+
+      public  stdout, stderr, command
+      private sh, fso, syncmode, outfile, errfile
+      private ForReading, TristateUseDefault, DoNotCreateFile
+
+      Public Function Exec(sCmd)
+        ' Очистка старых файлов stdout и stderr.
+        stdout = vbNullString: stderr = vbNullString
+        ' В целях отладки сохраняем значение sCmd
+        command = sh.ExpandEnvironmentStrings(sCmd)
+        sh.Run "%COMSPEC% /c " & sCmd & " 2>" & errfile & " 1>" & outfile, 0, syncmode
+        stderr = ProcessFile(errfile)
+        stdout = ProcessFile(outfile)
+        Exec = stdout
+      End Function
+
+      Private Sub class_initialize
+        Set sh = CreateObject("WScript.Shell")
+        Set fso = CreateObject("Scripting.FileSystemObject")
+        ForReading = 1
+        TristateUseDefault = -2
+        DoNotCreateFile = false
+        Dim tempdir
+        tempdir = sh.ExpandEnvironmentStrings("%TEMP%")
+        outfile = tempdir & "\" & fso.GetTempName
+        errfile = tempdir & "\" & fso.GetTempName
+        syncmode = true
+      End Sub
+
+      Private Function ProcessFile(filepath)
+        ' Находим файл по данному пути и считываем его содержимое
+        If fso.FileExists(filepath) Then
+          With fso.OpenTextFile(filepath, ForReading, false, TristateUseDefault)
+            If .AtEndOfStream <> true Then
+              ProcessFile = .ReadAll
+            End If
+            .Close
+            fso.DeleteFile(filepath)
+          End With
+        End If
+      End Function
+
+    End Class
+
+    Dim Console0: Set Console0 = new CliWrapper
+    Dim Console1: Set Console1 = new CliWrapper
+
+  </SCRIPT>
+
+  <SCRIPT language=JavaScript>
+    window.resizeTo (640,300);
+    window.moveTo   (50 , 50);
+
+    var Hosts      = new Array ("vpn.domain.com", "vpn2.domain.com");
+    var HostIndex  = 0;
+    var wsh        = new ActiveXObject ('WScript.Shell');
+    var fso        = new ActiveXObject ('Scripting.FileSystemObject');
+    var Host       = document.VPN.Host;
+    var Login      = document.VPN.Login;
+    var Password   = document.VPN.Password;
+    var Suffix     = document.VPN.Suffix;
+    var Name       = document.VPN.Name;
+    var TimerID;
+
+    function dos2win(text)
+    {
+      var out = ""
+      var dos = "Ђ ЃЎ‚ўѓЈ„¤…Ґрс†¦‡§€Ё‰©ЉЄ‹«Њ¬Ќ­Ћ®ЏЇђа‘б’в“г”д•е–ж—зи™йљк›лњмќнћоџп"
+      var win = "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя"
+      for (i=0; i < text.length; i++)
+      {
+        var ch  = text.charAt (i);
+        var idx = dos.indexOf (ch)
+        if (idx >= 0) ch = win.charAt (idx);
+        out = out + ch;
+      }
+      return out;
+    }
+
+    function Rus2Trans(from)
+    {
+      var Rus   = new Array('а','б','в','г','д','е','ё' ,'ж' ,'з','и','й','к','л','м','н','о','п','р','с','т','у','ф','х','ц','ч' ,'ш' ,'щ'  ,'ъ','ы','ь','э','ю' ,'я' ,
+                           'А','Б','В','Г','Д','Е','Ё' ,'Ж' ,'З','И','Й','К','Л','М','Н','О','П','Р','С','Т','У','Ф','Х','Ц','Ч' ,'Ш' ,'Щ'  ,'Ъ','Ы','Ь','Э','Ю' ,'Я' );
+      var Trans = new Array('a','b','v','g','d','e','yo','zh','z','i','j','k','l','m','n','o','p','r','s','t','u','f','h','c','ch','sh','sch','' ,'y','' ,'e','yu','ya',
+                           'A','B','V','G','D','E','YO','ZH','Z','I','J','K','L','M','N','O','P','R','S','T','U','F','H','C','CH','SH','SCH','' ,'Y','' ,'E','YU','YA');
+      var to = '';
+      var i,c,isRus;
+      for(i = 0; i < from.length; i++)
+      {
+        c = from.charAt(i,1);
+        isRus = false;
+        for(j = 0; j < Rus.length; j++)
+          if(c == Rus[j])
+          {
+            isRus = true;
+            break;
+          }
+        to += (isRus) ? Trans[j] : c;
+      }
+      return to;
+    }
+
+    function Host_Handler()
+    {
+      Host.value = Host.value.replace (/[^a-zA-Z0-9_.-]/g,'');
+    }
+
+    function Login_Handler()
+    {
+      Login.value = Rus2Trans (Login.value);
+      Login.value = Login.value.replace (/[^a-zA-Z0-9_.-]/g,'');
+      Name.value  = 'vpn-'+Login.value;
+    }
+
+    function Password_Handler()
+    {
+      Password.value = Password.value.replace (/[^a-zA-Z0-9_.-]/g,'');
+    }
+
+    function Suffix_Handler()
+    {
+      Suffix.value = Suffix.value.replace (/[^a-zA-Z0-9_.-]/g,'');
+    }
+
+    function Name_Handler()
+    {
+      Name.value = Name.value.replace (/[^a-zA-Z0-9_.-]/g,'');
+    }
+
+    function Bad_Host()     { if (Host.value     < '!') { alert ('The server is not set'  ); return true; } return false; }
+    function Bad_Login()    { if (Login.value    < '!') { alert ('The user is not set'    ); return true; } return false; }
+    function Bad_Password() { if (Password.value < '!') { alert ('The password is not set'); return true; } return false; }
+    function Bad_Name()     { if (Name.value     < '!') { alert ('The name is not set'    ); return true; } return false; }
+
+    function Host_Switch()
+    {
+      VPN.Host.value = Hosts [HostIndex];
+      HostIndex = (HostIndex+1) % Hosts.length;
+    }
+
+    function VPN_Delete()
+    {
+      if (Bad_Name()) return;
+      Console0.Exec ('%SYSTEMROOT%\\PPTP.bat delete "'+Name.value+'"');
+      if (Console0.stdout!=undefined) alert (dos2win(Console0.stdout));
+    }
+
+    function VPN_Add()
+    {
+      if (Bad_Name() | Bad_Host() | Bad_Login() | Bad_Password()) return;
+      Console1.Exec ('nircmd.exe shortcut    "~$folder.system$\\rasphone.exe" "~$folder.common_desktop$" "Remote Access Connections"');
+      Console1.Exec ('%SYSTEMROOT%\\pptp.bat add "'+Name.value+'" "'+Host.value+'" "'+Login.value+'" "'+Password.value+'" "'+Suffix.value+'"');
+      if (Console1.stdout!=undefined) alert (dos2win(Console1.stdout));
+    }
+
+    Host_Switch();
+    VPN.Login.value='user';
+    VPN.Password.value='';
+    VPN.Suffix.value='domain.local';
+    Login_Handler();
+  </SCRIPT>
+
+</BODY>
+</HTML>

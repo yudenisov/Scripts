@@ -1,0 +1,298 @@
+Windows Registry Editor Version 5.00
+
+; ExecutableTypes = ADE ADP BAS BAT CHM CMD COM CPL CRT EXE HLP HTA INF INS ISP LNK MDB MDE MSC MSI MSP MST OCX PCD PIF REG SCR SHS URL VB VBS WSC
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers]
+"DefaultLevel"=dword:00000000
+"TransparentEnabled"=dword:00000001
+"PolicyScope"=dword:00000000
+"ExecutableTypes"=hex(7):57,00,53,00,43,00,00,00,56,00,42,00,53,00,00,00,56,00,\
+  42,00,00,00,55,00,52,00,4c,00,00,00,53,00,48,00,53,00,00,00,53,00,43,00,52,\
+  00,00,00,52,00,45,00,47,00,00,00,50,00,49,00,46,00,00,00,50,00,43,00,44,00,\
+  00,00,4f,00,43,00,58,00,00,00,4d,00,53,00,54,00,00,00,4d,00,53,00,50,00,00,\
+  00,4d,00,53,00,49,00,00,00,4d,00,53,00,43,00,00,00,4d,00,44,00,45,00,00,00,\
+  4d,00,44,00,42,00,00,00,4c,00,4e,00,4b,00,00,00,49,00,53,00,50,00,00,00,49,\
+  00,4e,00,53,00,00,00,49,00,4e,00,46,00,00,00,48,00,54,00,41,00,00,00,48,00,\
+  4c,00,50,00,00,00,45,00,58,00,45,00,00,00,43,00,52,00,54,00,00,00,43,00,50,\
+  00,4c,00,00,00,43,00,4f,00,4d,00,00,00,43,00,4d,00,44,00,00,00,43,00,48,00,\
+  4d,00,00,00,42,00,41,00,54,00,00,00,42,00,41,00,53,00,00,00,41,00,44,00,50,\
+  00,00,00,41,00,44,00,45,00,00,00
+"AuthenticodeEnabled"=dword:00000001
+
+; %HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print\Printers%
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\0\Paths\{2d44153a-e217-454e-8f2d-09b898efc02a}]
+"LastModified"=hex(b):66,fc,e6,8f,48,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,4c,00,4f,00,43,00,41,00,\
+  4c,00,5f,00,4d,00,41,00,43,00,48,00,49,00,4e,00,45,00,5c,00,53,00,4f,00,46,\
+  00,54,00,57,00,41,00,52,00,45,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,\
+  6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,20,00,4e,\
+  00,54,00,5c,00,43,00,75,00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,\
+  73,00,69,00,6f,00,6e,00,5c,00,50,00,72,00,69,00,6e,00,74,00,5c,00,50,00,72,\
+  00,69,00,6e,00,74,00,65,00,72,00,73,00,25,00,00,00
+
+; %systemroot%/Temp
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\0\Paths\{d43799a1-283f-4696-874f-5da95dfe04e3}]
+"LastModified"=hex(b):44,79,26,0a,51,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,73,00,79,00,73,00,74,00,65,00,6d,00,72,00,6f,00,6f,00,\
+  74,00,25,00,2f,00,54,00,65,00,6d,00,70,00,00,00
+
+; %HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Common Programs%*/*.lnk
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{3c967952-6a5f-40c6-a046-9e3096a0c0ab}]
+"LastModified"=hex(b):b8,9e,78,76,48,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,4c,00,4f,00,43,00,41,00,\
+  4c,00,5f,00,4d,00,41,00,43,00,48,00,49,00,4e,00,45,00,5c,00,53,00,4f,00,46,\
+  00,54,00,57,00,41,00,52,00,45,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,\
+  6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,43,\
+  00,75,00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,73,00,69,00,6f,00,\
+  6e,00,5c,00,45,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,5c,00,53,00,68,\
+  00,65,00,6c,00,6c,00,20,00,46,00,6f,00,6c,00,64,00,65,00,72,00,73,00,5c,00,\
+  43,00,6f,00,6d,00,6d,00,6f,00,6e,00,20,00,50,00,72,00,6f,00,67,00,72,00,61,\
+  00,6d,00,73,00,25,00,2a,00,2f,00,2a,00,2e,00,6c,00,6e,00,6b,00,00,00
+
+; %HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Programs%*.lnk
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{441ed6f1-b583-4ee5-aa28-2c231e52183d}]
+"LastModified"=hex(b):41,b2,1a,33,48,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,43,00,55,00,52,00,52,00,\
+  45,00,4e,00,54,00,5f,00,55,00,53,00,45,00,52,00,5c,00,53,00,6f,00,66,00,74,\
+  00,77,00,61,00,72,00,65,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,6f,00,\
+  66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,43,00,75,\
+  00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,73,00,69,00,6f,00,6e,00,\
+  5c,00,45,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,5c,00,53,00,68,00,65,\
+  00,6c,00,6c,00,20,00,46,00,6f,00,6c,00,64,00,65,00,72,00,73,00,5c,00,50,00,\
+  72,00,6f,00,67,00,72,00,61,00,6d,00,73,00,25,00,2a,00,2e,00,6c,00,6e,00,6b,\
+  00,00,00
+
+; %HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Common Programs%*.lnk
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{481c8234-0288-456c-9bbd-239e37bd12ae}]
+"LastModified"=hex(b):b2,fd,30,6d,48,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,4c,00,4f,00,43,00,41,00,\
+  4c,00,5f,00,4d,00,41,00,43,00,48,00,49,00,4e,00,45,00,5c,00,53,00,4f,00,46,\
+  00,54,00,57,00,41,00,52,00,45,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,\
+  6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,43,\
+  00,75,00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,73,00,69,00,6f,00,\
+  6e,00,5c,00,45,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,5c,00,53,00,68,\
+  00,65,00,6c,00,6c,00,20,00,46,00,6f,00,6c,00,64,00,65,00,72,00,73,00,5c,00,\
+  43,00,6f,00,6d,00,6d,00,6f,00,6e,00,20,00,50,00,72,00,6f,00,67,00,72,00,61,\
+  00,6d,00,73,00,25,00,2a,00,2e,00,6c,00,6e,00,6b,00,00,00
+
+; C:/Program Files
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{51319171-821b-4b8e-a5b2-4ffbbf7b4270}]
+"LastModified"=hex(b):60,65,51,ec,ec,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"="C:/Program Files"
+
+; %programfiles(x86)%
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{568a391a-3ed4-4b78-ac55-cd677dbd2272}]
+"LastModified"=hex(b):ae,01,63,5a,f4,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,70,00,72,00,6f,00,67,00,72,00,61,00,6d,00,66,00,69,00,\
+  6c,00,65,00,73,00,28,00,78,00,38,00,36,00,29,00,25,00,00,00
+
+; %HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\ProgramW6432Dir%
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{63d591f3-3ec7-4dc9-975f-55544d7565ef}]
+"LastModified"=hex(b):37,d8,e0,f4,eb,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,4c,00,4f,00,43,00,41,00,\
+  4c,00,5f,00,4d,00,41,00,43,00,48,00,49,00,4e,00,45,00,5c,00,53,00,4f,00,46,\
+  00,54,00,57,00,41,00,52,00,45,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,\
+  6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,43,\
+  00,75,00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,73,00,69,00,6f,00,\
+  6e,00,5c,00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,57,00,36,00,34,00,33,\
+  00,32,00,44,00,69,00,72,00,25,00,00,00
+
+; %HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRoot%
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{6ff279f1-e2d3-46b2-ba60-cfe4ecd62f11}]
+"LastModified"=hex(b):05,b4,5d,d5,eb,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,4c,00,4f,00,43,00,41,00,\
+  4c,00,5f,00,4d,00,41,00,43,00,48,00,49,00,4e,00,45,00,5c,00,53,00,4f,00,46,\
+  00,54,00,57,00,41,00,52,00,45,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,\
+  6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,20,00,4e,\
+  00,54,00,5c,00,43,00,75,00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,\
+  73,00,69,00,6f,00,6e,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,\
+  00,6f,00,74,00,25,00,00,00
+
+; %HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Desktop%*.lnk
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{7788ce18-ed0c-46d2-b8bb-59e092b9513a}]
+"LastModified"=hex(b):fc,cb,92,29,48,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,43,00,55,00,52,00,52,00,\
+  45,00,4e,00,54,00,5f,00,55,00,53,00,45,00,52,00,5c,00,53,00,6f,00,66,00,74,\
+  00,77,00,61,00,72,00,65,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,6f,00,\
+  66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,43,00,75,\
+  00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,73,00,69,00,6f,00,6e,00,\
+  5c,00,45,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,5c,00,53,00,68,00,65,\
+  00,6c,00,6c,00,20,00,46,00,6f,00,6c,00,64,00,65,00,72,00,73,00,5c,00,44,00,\
+  65,00,73,00,6b,00,74,00,6f,00,70,00,25,00,2a,00,2e,00,6c,00,6e,00,6b,00,00,\
+  00
+
+; %HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Common Programs%*/*/*.lnk
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{79ad3fa0-7a07-4a4d-a0c9-e829d7f52104}]
+"LastModified"=hex(b):5b,fd,ac,81,48,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,4c,00,4f,00,43,00,41,00,\
+  4c,00,5f,00,4d,00,41,00,43,00,48,00,49,00,4e,00,45,00,5c,00,53,00,4f,00,46,\
+  00,54,00,57,00,41,00,52,00,45,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,\
+  6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,43,\
+  00,75,00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,73,00,69,00,6f,00,\
+  6e,00,5c,00,45,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,5c,00,53,00,68,\
+  00,65,00,6c,00,6c,00,20,00,46,00,6f,00,6c,00,64,00,65,00,72,00,73,00,5c,00,\
+  43,00,6f,00,6d,00,6d,00,6f,00,6e,00,20,00,50,00,72,00,6f,00,67,00,72,00,61,\
+  00,6d,00,73,00,25,00,2a,00,2f,00,2a,00,2f,00,2a,00,2e,00,6c,00,6e,00,6b,00,\
+  00,00
+
+; %HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Common Desktop%*.lnk
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{7b83a281-3b26-40b6-8505-7615448dac15}]
+"LastModified"=hex(b):8f,52,5a,65,48,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,4c,00,4f,00,43,00,41,00,\
+  4c,00,5f,00,4d,00,41,00,43,00,48,00,49,00,4e,00,45,00,5c,00,53,00,4f,00,46,\
+  00,54,00,57,00,41,00,52,00,45,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,\
+  6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,43,\
+  00,75,00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,73,00,69,00,6f,00,\
+  6e,00,5c,00,45,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,5c,00,53,00,68,\
+  00,65,00,6c,00,6c,00,20,00,46,00,6f,00,6c,00,64,00,65,00,72,00,73,00,5c,00,\
+  43,00,6f,00,6d,00,6d,00,6f,00,6e,00,20,00,44,00,65,00,73,00,6b,00,74,00,6f,\
+  00,70,00,25,00,2a,00,2e,00,6c,00,6e,00,6b,00,00,00
+
+; %userprofile%/Application Data/Microsoft/Internet Explorer/Quick Launch/*.lnk
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{8c592d4a-3c39-4e93-bebd-daa2a3097d50}]
+"LastModified"=hex(b):b0,1b,d5,18,51,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,75,00,73,00,65,00,72,00,70,00,72,00,6f,00,66,00,69,00,\
+  6c,00,65,00,25,00,2f,00,41,00,70,00,70,00,6c,00,69,00,63,00,61,00,74,00,69,\
+  00,6f,00,6e,00,20,00,44,00,61,00,74,00,61,00,2f,00,4d,00,69,00,63,00,72,00,\
+  6f,00,73,00,6f,00,66,00,74,00,2f,00,49,00,6e,00,74,00,65,00,72,00,6e,00,65,\
+  00,74,00,20,00,45,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,2f,00,51,00,\
+  75,00,69,00,63,00,6b,00,20,00,4c,00,61,00,75,00,6e,00,63,00,68,00,2f,00,2a,\
+  00,2e,00,6c,00,6e,00,6b,00,00,00
+
+; %HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\ProgramFilesDir%
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{a4d590b4-8173-4bd4-9c56-2eec661765a2}]
+"LastModified"=hex(b):f2,1c,21,df,eb,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,4c,00,4f,00,43,00,41,00,\
+  4c,00,5f,00,4d,00,41,00,43,00,48,00,49,00,4e,00,45,00,5c,00,53,00,4f,00,46,\
+  00,54,00,57,00,41,00,52,00,45,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,\
+  6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,43,\
+  00,75,00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,73,00,69,00,6f,00,\
+  6e,00,5c,00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,46,00,69,00,6c,00,65,\
+  00,73,00,44,00,69,00,72,00,25,00,00,00
+
+; %HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Common Administrative Tools%*.lnk
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{a5843d90-5e8e-411c-b8a3-6cb47bea7522}]
+"LastModified"=hex(b):01,43,b3,5d,48,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,4c,00,4f,00,43,00,41,00,\
+  4c,00,5f,00,4d,00,41,00,43,00,48,00,49,00,4e,00,45,00,5c,00,53,00,4f,00,46,\
+  00,54,00,57,00,41,00,52,00,45,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,\
+  6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,43,\
+  00,75,00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,73,00,69,00,6f,00,\
+  6e,00,5c,00,45,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,5c,00,53,00,68,\
+  00,65,00,6c,00,6c,00,20,00,46,00,6f,00,6c,00,64,00,65,00,72,00,73,00,5c,00,\
+  43,00,6f,00,6d,00,6d,00,6f,00,6e,00,20,00,41,00,64,00,6d,00,69,00,6e,00,69,\
+  00,73,00,74,00,72,00,61,00,74,00,69,00,76,00,65,00,20,00,54,00,6f,00,6f,00,\
+  6c,00,73,00,25,00,2a,00,2e,00,6c,00,6e,00,6b,00,00,00
+
+; %HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\ProgramFilesDir (x86)%
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{ae1d590f-dada-481a-b35e-41ed11504524}]
+"LastModified"=hex(b):d4,2e,b3,ed,eb,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,4c,00,4f,00,43,00,41,00,\
+  4c,00,5f,00,4d,00,41,00,43,00,48,00,49,00,4e,00,45,00,5c,00,53,00,4f,00,46,\
+  00,54,00,57,00,41,00,52,00,45,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,\
+  6f,00,66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,43,\
+  00,75,00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,73,00,69,00,6f,00,\
+  6e,00,5c,00,50,00,72,00,6f,00,67,00,72,00,61,00,6d,00,46,00,69,00,6c,00,65,\
+  00,73,00,44,00,69,00,72,00,20,00,28,00,78,00,38,00,36,00,29,00,25,00,00,00
+
+; %HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Programs%*/*/*.lnk
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{afd67b11-a506-46a5-850a-665c71e2a30f}]
+"LastModified"=hex(b):13,c8,1b,55,48,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,43,00,55,00,52,00,52,00,\
+  45,00,4e,00,54,00,5f,00,55,00,53,00,45,00,52,00,5c,00,53,00,6f,00,66,00,74,\
+  00,77,00,61,00,72,00,65,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,6f,00,\
+  66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,43,00,75,\
+  00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,73,00,69,00,6f,00,6e,00,\
+  5c,00,45,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,5c,00,53,00,68,00,65,\
+  00,6c,00,6c,00,20,00,46,00,6f,00,6c,00,64,00,65,00,72,00,73,00,5c,00,50,00,\
+  72,00,6f,00,67,00,72,00,61,00,6d,00,73,00,25,00,2a,00,2f,00,2a,00,2f,00,2a,\
+  00,2e,00,6c,00,6e,00,6b,00,00,00
+
+; %programfiles%
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{b8eb6b1b-9462-4e10-9102-5679b31eefd2}]
+"LastModified"=hex(b):6b,6b,1c,e1,47,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,70,00,72,00,6f,00,67,00,72,00,61,00,6d,00,66,00,69,00,\
+  6c,00,65,00,73,00,25,00,00,00
+
+; C:/Program Files (x86)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{ca8af139-f34d-4d70-b7d5-3084e264f419}]
+"LastModified"=hex(b):87,43,35,e8,ec,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"="C:/Program Files (x86)"
+
+; %HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\AppData%/Microsoft/Internet Explorer/Quick Launch/*.lnk
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{d602cb34-7c1b-4dda-8fc5-d821e0028ef6}]
+"LastModified"=hex(b):c1,9d,3e,1b,48,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,43,00,55,00,52,00,52,00,\
+  45,00,4e,00,54,00,5f,00,55,00,53,00,45,00,52,00,5c,00,53,00,4f,00,46,00,54,\
+  00,57,00,41,00,52,00,45,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,6f,00,\
+  66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,43,00,75,\
+  00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,73,00,69,00,6f,00,6e,00,\
+  5c,00,45,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,5c,00,53,00,68,00,65,\
+  00,6c,00,6c,00,20,00,46,00,6f,00,6c,00,64,00,65,00,72,00,73,00,5c,00,41,00,\
+  70,00,70,00,44,00,61,00,74,00,61,00,25,00,2f,00,4d,00,69,00,63,00,72,00,6f,\
+  00,73,00,6f,00,66,00,74,00,2f,00,49,00,6e,00,74,00,65,00,72,00,6e,00,65,00,\
+  74,00,20,00,45,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,2f,00,51,00,75,\
+  00,69,00,63,00,6b,00,20,00,4c,00,61,00,75,00,6e,00,63,00,68,00,2f,00,2a,00,\
+  2e,00,6c,00,6e,00,6b,00,00,00
+
+; %systemroot%
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{d9218c93-b2e4-4131-b0c0-cb403d1d3fe2}]
+"LastModified"=hex(b):d0,e3,0a,d3,47,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,73,00,79,00,73,00,74,00,65,00,6d,00,72,00,6f,00,6f,00,\
+  74,00,25,00,00,00
+
+; %HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\Programs%*/*.lnk
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers\262144\Paths\{f6b4bbca-f7fc-4a96-84b3-e30faa86f348}]
+"LastModified"=hex(b):ec,ab,3c,43,48,ef,ce,01
+"Description"=""
+"SaferFlags"=dword:00000000
+"ItemData"=hex(2):25,00,48,00,4b,00,45,00,59,00,5f,00,43,00,55,00,52,00,52,00,\
+  45,00,4e,00,54,00,5f,00,55,00,53,00,45,00,52,00,5c,00,53,00,6f,00,66,00,74,\
+  00,77,00,61,00,72,00,65,00,5c,00,4d,00,69,00,63,00,72,00,6f,00,73,00,6f,00,\
+  66,00,74,00,5c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,00,5c,00,43,00,75,\
+  00,72,00,72,00,65,00,6e,00,74,00,56,00,65,00,72,00,73,00,69,00,6f,00,6e,00,\
+  5c,00,45,00,78,00,70,00,6c,00,6f,00,72,00,65,00,72,00,5c,00,53,00,68,00,65,\
+  00,6c,00,6c,00,20,00,46,00,6f,00,6c,00,64,00,65,00,72,00,73,00,5c,00,50,00,\
+  72,00,6f,00,67,00,72,00,61,00,6d,00,73,00,25,00,2a,00,2f,00,2a,00,2e,00,6c,\
+  00,6e,00,6b,00,00,00
