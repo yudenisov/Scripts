@@ -15,7 +15,7 @@ MinVersion=6.0.6001
 SetupLogging=yes
 UsePreviousAppDir=yes
 DisableStartupPrompt=yes
-Output=no
+Output=yes
 OutputDir=d:\Download
 OutputBaseFilename=AdminScriptsSet01
 
