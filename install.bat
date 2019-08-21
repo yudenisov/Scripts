@@ -12,13 +12,17 @@ if defined KEY    set    KEY=%KEY:/=-%
 if /I "%KEY%"=="-sfx" goto MakeSFX
 
 :UnInstall
-schtasks.exe>nul 2>nul /F /DELETE /TN "Scripts"
+schtasks.exe>nul 2>nul /F /DELETE /TN "Admin_Scripts"
 call        >nul 2>nul "%~dp0Files\CheckMemberOfDomain.bat" || (
   reg.exe   >nul 2>nul delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\Safer\CodeIdentifiers" /F
   reg.exe   >nul 2>nul delete "HKLM\SOFTWARE\Policies\Microsoft\SystemCertificates\Disallowed\Certificates" /F
   reg.exe   >nul 2>nul delete "HKLM\SOFTWARE\Policies\Microsoft\SystemCertificates\TrustedPublisher\Certificates" /F
 )
-del         >nul 2>nul /A /F /Q "%SYSTEMROOT%\Tasks\Scripts.job"
+del         >nul 2>nul /A /F /Q "%SYSTEMROOT%\Tasks\Admin_Scripts.job"
+del         >nul 2>nul /A /F /Q "%SYSTEMROOT%\user-guide-ASS01.pdf"
+del         >nul 2>nul /A /F /Q "%SYSTEMROOT%\user-guide-ASS01.html"
+del         >nul 2>nul /A /F /Q "%SYSTEMROOT%\descript.ion"
+del         >nul 2>nul /A /F /Q "%SYSTEMROOT%\sed.exe"
 del         >nul 2>nul /A /F /Q "%SYSTEMROOT%\*.bat"
 del         >nul 2>nul /A /F /Q "%SYSTEMROOT%\*.hta"
 del         >nul 2>nul /A /F /A "%SYSTEMROOT%\un_*.exe"
@@ -26,12 +30,25 @@ del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\un_*.exe"
 del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\dd.dll"
 del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\contig.exe"
 del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\ddriverc.exe"
+del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\disknum.exe"
 del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\hidec.exe"
 del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\hs_color.exe"
 del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\hs_echo.exe"
 del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\nircmd.exe"
-del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\psexec.exe"
+del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\regjump.exe"
 del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\psx.exe"
+del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\usbitcmd.exe"
+del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\svc_known.txt"
+del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\scregedit.wsf"
+del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\ospp.vbs"
+del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\ospp.htm"
+del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\nircmd.chm"
+del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\hvremote.wsf"
+del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\actwinxp.vbs"
+del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\RestoreAllGPOs.wsf"
+del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\RenewTray.vbs"
+del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\Lib_CommonGPMCFunctions.js"
+del         >nul 2>nul /A /F /A "%SYSTEMROOT%\SYSTEM32\BackupAllGPOs.wsf"
 rmdir       >nul 2>nul /S /Q    "%SYSTEMROOT%\REGFILES"
 if /I "%KEY%"=="-u" goto Finish
 
@@ -47,8 +64,8 @@ call        >nul 2>nul "%~dp0Files\CheckMemberOfDomain.bat" || (
   reg.exe   >nul 2>nul import "%~dp0Files\REGFILES\DisallowedCerts.reg"
   reg.exe   >nul 2>nul import "%~dp0Files\REGFILES\TrustedPublisherCerts.reg"
 )
-schtasks.exe     2>&1  /CREATE /TN "Scripts" /SC "DAILY" /ST "12:10:00" /TR "ApplySettingsProfile.bat" /RU "SYSTEM" /RL "HIGHEST" /F|findstr.exe>nul 2>nul /I "�ᯥ譮 successfully" && goto Finish
-schtasks.exe>nul 2>nul /CREATE /TN "Scripts" /SC "DAILY" /ST "12:10:00" /TR "ApplySettingsProfile.bat" /RU "SYSTEM"
+rem schtasks.exe     2>&1  /CREATE /TN "Admin_Scripts" /SC "DAILY" /ST "12:10:00" /TR "ApplySettingsProfile.bat" /RU "SYSTEM" /RL "HIGHEST" /F|findstr.exe>nul 2>nul /I "�ᯥ譮 successfully" && goto Finish
+rem schtasks.exe>nul 2>nul /CREATE /TN "Admin_Scripts" /SC "DAILY" /ST "12:10:00" /TR "ApplySettingsProfile.bat" /RU "SYSTEM"
 goto Finish
 
 :MakeSFX
