@@ -22,3 +22,13 @@ $RECYCLE.BIN/
 # Operating System Files
 # =========================
 .svn
+.vs
+obj/*.*
+Scripts/obj/Debug/*.*
+Scripts/bin/Debug/*.*
+# =========================
+# Custom Files
+# =========================
+
+Scripts/Scripts.7z
+Scripts/Scripts.SFX.exe

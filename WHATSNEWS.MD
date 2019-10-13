@@ -1,17 +1,1 @@
-WHAT NEWS
-===========
-
-Version 1.0.0.0_alpha
----------------------
-- (Add) Working Documentation
-- (Add and Modify) Installation Files
-- (Modify) Installation Path
-
-
-Version 0.2.0.0_alpha
----------------------
-
-- (Modify) Working Code
-- (Add) InnoSetup Installation
-- (Add) README file
-
+﻿WHAT NEWS===========##Version 1.0.1.0_alpha- (Modify) Installer now is an MSI File- (Add) A Password is set on main Archive for Protect from Antimalware- (Modify) New Uninstaller- (Add) Test Messages duiring Install and Uninstall##Version 1.0.0.0_alpha- (Add) Working Documentation- (Add and Modify) Installation Files- (Modify) Installation Path##Version 0.2.0.0_alpha- (Modify) Working Code- (Add) InnoSetup Installation- (Add) README file
