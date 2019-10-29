@@ -3,12 +3,12 @@ Set wshShell = CreateObject( "WScript.Shell" )
 Set shApp = CreateObject( "Shell.Application" )
 Set fso = CreateObject( "Scripting.FileSystemObject" )
 strProgPath = wshShell.ExpandEnvironmentStrings( "%ProgramFiles(x86)%")
-strFilePath = strProgPath & "\AdminScripts.Set01\" & "install-scripts.bat"
+strFilePath = strProgPath & "\AdminScripts.Set01\" & "call.uninstall.bat"
 if fso.FileExists( strFilePath ) then
-    shApp.ShellExecute strFilePath, "", "", "runas", 0
+    shApp.ShellExecute strFilePath, "", "", "runas", 1
     TimeSleep( 10 )
-'else
-'    MsgBox "File " & strFilePath & " Not Found", 0, "Error"
+else
+    MsgBox "File " & strFilePath & " Not Found", 0, "Error"
 end if
 Sub TimeSleep ( delim )
 	Dim dteWait

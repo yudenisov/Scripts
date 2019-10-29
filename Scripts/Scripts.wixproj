@@ -29,9 +29,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="install-scripts.bat" />
+    <Content Include="install-scriptsx32.bat" />
     <Content Include="RemoveAdminScriptsSet01.vbs" />
     <Content Include="time.sleep.vbs" />
     <Content Include="UnpackAdminScriptsSet01.vbs" />
+    <Content Include="UnpackAdminScriptsSet01x32.vbs" />
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" Condition=" '$(WixTargetsPath)' != '' " />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets" Condition=" '$(WixTargetsPath)' == '' AND Exists('$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets') " />

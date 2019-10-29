@@ -1,18 +1,15 @@
-' On Error Resume Next
-Dim wshShell, shApp, fso, strFilePath, strWinPath
+Dim wshShell, shApp, objFile, strFilePath, strProgPath, fso
 Set wshShell = CreateObject( "WScript.Shell" )
-strWinPath = wshShell.ExpandEnvironmentStrings( "%SystemRoot%" )
 Set shApp = CreateObject( "Shell.Application" )
 Set fso = CreateObject( "Scripting.FileSystemObject" )
-strFilePath = strWinPath & "\make_uninstall.AdminScripts.cmd"
+strProgPath = wshShell.ExpandEnvironmentStrings( "%ProgramFiles%")
+strFilePath = strProgPath & "\AdminScripts.Set01\" & "install-scriptsx32.bat"
 if fso.FileExists( strFilePath ) then
-    shApp.ShellExecute strFilePath, "","", "runas", 0
+    shApp.ShellExecute strFilePath, "", "", "runas", 0
     TimeSleep( 10 )
-    fso.DeleteFile( strFilePath )
 'else
 '    MsgBox "File " & strFilePath & " Not Found", 0, "Error"
 end if
-
 Sub TimeSleep ( delim )
 	Dim dteWait
 	dteWait = DateAdd("s", delim, Now())

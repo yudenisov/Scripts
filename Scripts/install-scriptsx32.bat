@@ -1,6 +1,6 @@
 @echo off
-if not exist "%ProgramFiles(x86)%\AdminScripts.Set01\Scripts.SFX.exe" goto Error
-"%ProgramFiles(x86)%\AdminScripts.Set01\Scripts.SFX.exe" -p1234
+if not exist "%ProgramFiles%\AdminScripts.Set01\Scripts.SFX.exe" goto Error
+"%ProgramFiles%\AdminScripts.Set01\Scripts.SFX.exe" -p1234
 for /F "tokens=1,2,*" %%i in ('reg.exe 2^>nul query "HKU"') do (
   reg.exe   >nul 2>nul add "%%~i\Software\Sysinternals\C"       /V "EulaAccepted" /T REG_DWORD /D "1" /F
   reg.exe   >nul 2>nul add "%%~i\Software\Sysinternals\PSExec"  /V "EulaAccepted" /T REG_DWORD /D "1" /F
@@ -15,6 +15,6 @@ rem schtasks.exe     2>&1  /CREATE /TN "Admin_Scripts" /SC "DAILY" /ST "12:10:00
 rem schtasks.exe>nul 2>nul /CREATE /TN "Admin_Scripts" /SC "DAILY" /ST "12:10:00" /TR "ApplySettingsProfile.bat" /RU "SYSTEM"
 goto Finish
 :Error
-echo "File %ProgramFiles(x86)%\AdminScripts.Set01\Scripts.SFX.exe not found"
+rem echo "File %ProgramFiles%\AdminScripts.Set01\Scripts.SFX.exe not found"
 rem pause
 :Finish

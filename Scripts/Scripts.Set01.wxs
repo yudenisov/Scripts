@@ -6,47 +6,46 @@
         <WixVariable Id="WixUILicenseRtf" Value="..\license.rtf" />
         <Directory Id="TARGETDIR" Name="SourceDir">
             <Directory Id="ProgramFilesFolder" Name="PFiles">
-                <Directory Id="ADMINSCRIPTS" Name="AdminScripts.Set01">
-                    <Component Id="INSTALL_SCRIPTS.BAT" DiskId="1" Guid="7DDC70C9-E3EE-49BD-8A0E-732AA1B54408">
+                <Directory Id="ADMINSCRIPTS.SET01" Name="AdminScripts.Set01">
+
+                    <Component Id="INSTALL_SCRIPTS.BAT" DiskId="1" Guid="0694A91D-E47D-4901-A8BB-B45BE5601FE7">
                         <File Id="INSTALL_SCRIPTS.BAT" Name="install-scripts.bat" Source="install-scripts.bat" />
                     </Component>
-                    <Component Id="LICENSE.MD" DiskId="1" Guid="57AC4996-6D7D-49C3-9B24-EABC522F89C7">
-                        <File Id="LICENSE.MD" Name="LICENSE.md" Source="..\LICENSE.md" />
+                    <Component Id="INSTALL_SCRIPTSX32.BAT" DiskId="1" Guid="6238AE9F-4695-4251-B784-19021F7299A6">
+                        <File Id="INSTALL_SCRIPTSX32.BAT" Name="install-scriptsx32.bat" Source="install-scriptsx32.bat" />
                     </Component>
-                    <Component Id="LICENSE.RTF" DiskId="1" Guid="11CE4D71-BB59-4577-B4ED-F0CA2D122AB8">
-                        <File Id="LICENSE.RTF" Name="license.rtf" Source="..\license.rtf" />
-                    </Component>
-                    <Component Id="REMOVEADMINSCRIPTSSET01.VBS" DiskId="1" Guid="566AD8E7-3C5B-4DA2-9246-2E7423693594">
+                    <Component Id="REMOVEADMINSCRIPTSSET01.VBS" DiskId="1" Guid="4BD33E09-03EA-40EC-92A6-D3F88D20A172">
                         <File Id="REMOVEADMINSCRIPTSSET01.VBS" Name="RemoveAdminScriptsSet01.vbs" Source="RemoveAdminScriptsSet01.vbs" />
                     </Component>
-                    <Component Id="SCRIPTS.SFX.EXE" DiskId="1" Guid="CA5B8010-504A-4796-B82E-864F73A25B55">
+                    <Component Id="SCRIPTS.SFX.EXE" DiskId="1" Guid="3E983ED6-6DE3-4B12-A9B9-9E68423812A1">
                         <File Id="SCRIPTS.SFX.EXE" Name="Scripts.SFX.exe" Source="Scripts.SFX.exe" />
                     </Component>
-                    <Component Id="UNPACKADMINSCRIPTSSET01.VBS" DiskId="1" Guid="143578E6-1330-4916-9853-8A3BB9C57D4D">
+                    <Component Id="UNPACKADMINSCRIPTSSET01.VBS" DiskId="1" Guid="C5EA652E-B100-45D7-9285-188059561C3B">
                         <File Id="UNPACKADMINSCRIPTSSET01.VBS" Name="UnpackAdminScriptsSet01.vbs" Source="UnpackAdminScriptsSet01.vbs" />
+                    </Component>
+                    <Component Id="UNPACKADMINSCRIPTSSET01X32.VBS" DiskId="1" Guid="C1D50FE1-02AF-429F-AD84-14CD6D7493C6">
+                        <File Id="UNPACKADMINSCRIPTSSET01X32.VBS" Name="UnpackAdminScriptsSet01x32.vbs" Source="UnpackAdminScriptsSet01x32.vbs" />
                     </Component>
                 </Directory>
             </Directory>
         </Directory>
         <Feature Id="DefaultFeature" Title="Main Feature" Level="1">
             <ComponentRef Id="INSTALL_SCRIPTS.BAT" />
-            <ComponentRef Id="LICENSE.MD" />
-            <ComponentRef Id="LICENSE.RTF" />
             <ComponentRef Id="SCRIPTS.SFX.EXE" />
             <ComponentRef Id="REMOVEADMINSCRIPTSSET01.VBS" />
             <ComponentRef Id="UNPACKADMINSCRIPTSSET01.VBS" />
+            <ComponentRef Id="INSTALL_SCRIPTSX32.BAT" />
+            <ComponentRef Id="UNPACKADMINSCRIPTSSET01X32.VBS" />
         </Feature>
         <UI />
         <UIRef Id="WixUI_Minimal" />
         <InstallExecuteSequence>
-            <Custom Action="UnpackAdminScriptsSet01" Before="InstallFinalize">Not Installed</Custom>
-            <Custom Action="RemoveAdminScriptsSet01" Before="RemoveFiles">Installed</Custom>
+            <Custom Action="RemoveAdminScriptsSet01" Before="RemoveFiles" />
+            <Custom Action="UnpackAdminScriptsSet01x32" Before="InstallFinalize" />
         </InstallExecuteSequence>
-        <Binary Id="UnpackAdminScriptsSet01id" SourceFile="UnpackAdminScriptsSet01.vbs" />
         <Binary Id="RemoveAdminScriptsSet01Id" SourceFile="RemoveAdminScriptsSet01.vbs" />
-        <CustomAction Id="UnpackAdminScriptsSet01" BinaryKey="UnpackAdminScriptsSet01id" Return="check" VBScriptCall="" HideTarget="no" Impersonate="no" Execute="deferred">
-        </CustomAction>
-        <CustomAction Id="RemoveAdminScriptsSet01" BinaryKey="RemoveAdminScriptsSet01Id" VBScriptCall="" Return="check" Impersonate="no" Execute="deferred" HideTarget="no">
-        </CustomAction>
+        <Binary Id="UnpackAdminScriptsSet01x32.id" SourceFile="UnpackAdminScriptsSet01x32.vbs" />
+        <CustomAction Id="RemoveAdminScriptsSet01" BinaryKey="RemoveAdminScriptsSet01Id" VBScriptCall="" Return="check" Impersonate="no" Execute="deferred" HideTarget="no" />
+        <CustomAction Id="UnpackAdminScriptsSet01x32" BinaryKey="UnpackAdminScriptsSet01x32.id" Execute="deferred" HideTarget="no" Impersonate="no" Return="check" VBScriptCall="" />
     </Product>
 </Wix>
