@@ -1,0 +1,6 @@
+install-scripts.bat
+install-scriptsx32.bat
+RemoveAdminScriptsSet01.vbs
+Scripts.SFX.exe
+UnpackAdminScriptsSet01.vbs
+UnpackAdminScriptsSet01x32.vbs
