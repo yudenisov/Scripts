@@ -1,2 +1,0 @@
-d:\yuden\Documents\GitHub\Scripts\Scripts\bin\Release\AdminScripts.Set01.msi
-d:\yuden\Documents\GitHub\Scripts\Scripts\bin\Release\AdminScripts.Set01.wixpdb

@@ -1,5 +1,0 @@
-REGEDIT4
-
-[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ImmersiveShell\EdgeUI]
-"DisableCharmsHint"=dword:00000001
-"DisableTLcorner"=dword:00000001

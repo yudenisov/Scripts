@@ -1,6 +1,0 @@
-d:\yuden\Documents\GitHub\Scripts\Scripts\bin\Release\AdminScripts.Set01.msi
-d:\yuden\Documents\GitHub\Scripts\Scripts\bin\Release\AdminScripts.Set01.wixpdb
-obj\Release\Scripts.Set01.wixobj
-obj\Release\Scripts.wixproj.BindContentsFileListnull.txt
-obj\Release\Scripts.wixproj.BindOutputsFileListnull.txt
-obj\Release\Scripts.wixproj.BindBuiltOutputsFileListnull.txt
